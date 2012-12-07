@@ -4,7 +4,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 import org.bukkit.Location;
-import org.bukkit.entity.Player;
+
 import org.bukkit.util.Vector;
 
 import com.github.odin8472.Plugina.Plugina;

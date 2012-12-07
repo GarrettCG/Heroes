@@ -1,11 +1,10 @@
 package com.github.odin8472.Plugina.blocks;
 
-import java.util.LinkedList;
-import java.util.ListIterator;
+
 
 import org.bukkit.Location;
 import org.bukkit.entity.Player;
-import org.bukkit.util.Vector;
+
 
 import com.github.odin8472.Plugina.Plugina;
 
@@ -20,7 +19,7 @@ public class HoverBlock implements BlockingMove{
 				System.out.println("About to lose one mana, current mana:"+Plugina.playerMap.get(player).getCurrentMana());
 				Plugina.playerMap.get(player).loseMana(1, player);
 
-				Location l=player.getLocation();
+				//Location l=player.getLocation();
 				//int y=getHighestPoint(l);
 				//if(l.getBlockY()>y+4){
 					//player.setFlying(false);

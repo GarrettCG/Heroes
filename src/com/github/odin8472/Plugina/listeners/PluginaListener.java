@@ -77,7 +77,7 @@ public class PluginaListener implements Listener {
     @EventHandler
     public void onPlayerJoin(PlayerJoinEvent event) {
     	System.out.println("Beginning of onPlayerJoin");
-    	Hero testfighter=new Fighter(plugin,event.getPlayer());
+    	Hero testfighter=new Vampire(plugin,event.getPlayer());
     	Plugina.playerMap.put(event.getPlayer(),testfighter );//gonna just set everyone to fighter for now
     	System.out.println("right before crash, listen is:"+Plugina.playerMap.get(event.getPlayer()).getListenId());
     	if(!HandlerList.getRegisteredListeners(plugin).contains(otherListeners.get(Plugina.playerMap.get(event.getPlayer()).getListenId()-1))){

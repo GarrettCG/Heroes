@@ -1,5 +1,6 @@
 package com.github.odin8472.Plugina;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.LinkedList;
 import java.util.Queue;
@@ -8,6 +9,7 @@ import org.bukkit.Material;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.Player;
 import org.bukkit.plugin.java.JavaPlugin;
+import org.bukkit.util.Vector;
 
 import com.github.odin8472.Plugina.heroes.Hero;
 import com.github.odin8472.Plugina.listeners.PluginaListener;
@@ -27,6 +29,7 @@ public final class Plugina extends JavaPlugin{
         // set the command executor for sample
         this.getCommand("basic").setExecutor(new PluginaCommandExecutor(this));
         //shitload of constants that i initialize... i would final most of them but i don't know how
+        floatingGrid=new ArrayList<Vector>();
         explosionList=new LinkedList<ExploData>();
         arrowMap=new HashMap<Entity,Boolean>();
         jumpLevelArray=new float[10];
@@ -52,6 +55,28 @@ public final class Plugina extends JavaPlugin{
         materialArray[2]=Material.IRON_SWORD;
         materialArray[3]=Material.GOLD_SWORD;
         materialArray[4]=Material.DIAMOND_SWORD;
+        floatingGrid.add(new Vector(0,0,0));
+        floatingGrid.add(new Vector(0,0,1));
+        floatingGrid.add(new Vector(1,0,0));
+        floatingGrid.add(new Vector(1,0,1));
+        floatingGrid.add(new Vector(0,0,-1));
+        floatingGrid.add(new Vector(-1,0,0));
+        floatingGrid.add(new Vector(-1,0,-1));
+        floatingGrid.add(new Vector(1,0,-1));
+        floatingGrid.add(new Vector(-1,0,1));
+        floatingGrid.add(new Vector(2,0,0));
+        floatingGrid.add(new Vector(0,0,2));
+        floatingGrid.add(new Vector(-2,0,0));
+        floatingGrid.add(new Vector(0,0,-2));
+        floatingGrid.add(new Vector(0,-1,0));
+        floatingGrid.add(new Vector(0,-1,1));
+        floatingGrid.add(new Vector(1,-1,0));
+        floatingGrid.add(new Vector(0,-1,-1));
+        floatingGrid.add(new Vector(-1,-1,0));
+
+
+        
+        
         System.out.println("After the last statement in onEnable");
         if(!playerMap.isEmpty()){
         	System.out.println("in plugina, starting the server with a non empty playermap! VERY BAD");
@@ -62,6 +87,7 @@ public final class Plugina extends JavaPlugin{
 		System.out.println("onDisable");
 		getLogger().info("onDisable has been invoked!");
 	}
+	public static ArrayList<Vector> floatingGrid;//putting this here cuz i'm not sure what hero it's going into, it's just another constant
 	public static ExploData selfharm;
 	public static Queue<ExploData> explosionList;
 	public static HashMap<Entity,Boolean> arrowMap;

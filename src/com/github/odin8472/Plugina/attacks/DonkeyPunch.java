@@ -1,9 +1,8 @@
 package com.github.odin8472.Plugina.attacks;
-import org.bukkit.Effect;
+
 import org.bukkit.Location;
-import org.bukkit.entity.Arrow;
-import org.bukkit.entity.Entity;
-import org.bukkit.util.Vector;
+
+//import org.bukkit.util.Vector;
 
 import com.github.odin8472.Plugina.Plugina;
 import com.github.odin8472.Plugina.utilities.ExploData;
@@ -30,7 +29,7 @@ public class DonkeyPunch implements SwordMove{//as it stands this class will cau
 	public boolean isDone() {
 		return isdone;
 	}
-	private Vector velocity;
+	//private Vector velocity;
 
 	private boolean isdone;
 	private StrikeDetails info;

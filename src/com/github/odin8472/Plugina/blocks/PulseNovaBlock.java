@@ -24,7 +24,7 @@ public class PulseNovaBlock implements BlockingMove{
 			if(!(Plugina.playerMap.get(player).getCurrentMana()<1)){
 				System.out.println("About to lose one mana, current mana:"+Plugina.playerMap.get(player).getCurrentMana());
 				Plugina.playerMap.get(player).loseMana(1, player);
-				Location l=player.getLocation();
+				//Location l=player.getLocation();
 				
 				Hero fighter=Plugina.playerMap.get(player);
 				Location startpoint=player.getLocation();

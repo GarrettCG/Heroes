@@ -1,15 +1,14 @@
 package com.github.odin8472.Plugina.attacks;
 
-import java.util.ArrayList;
 import java.util.LinkedList;
-import java.util.List;
+
 import java.util.ListIterator;
-import java.util.Queue;
+
 
 
 
 import org.bukkit.Location;
-import org.bukkit.entity.Player;
+
 import org.bukkit.util.Vector;
 
 import com.github.odin8472.Plugina.Plugina;

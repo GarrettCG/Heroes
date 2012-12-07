@@ -1,8 +1,7 @@
 package com.github.odin8472.Plugina.attacks;
 
-import org.bukkit.Bukkit;
 import org.bukkit.Effect;
-import org.bukkit.EntityEffect;
+
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
@@ -11,8 +10,6 @@ import org.bukkit.potion.PotionEffect;
 import org.bukkit.potion.PotionEffectType;
 
 import com.github.odin8472.Plugina.Plugina;
-import com.github.odin8472.Plugina.blocks.BatMove;
-import com.github.odin8472.Plugina.threadTypes.BlockWithSword;
 
 public class TransformBat implements SwordMove{//if you manipulate a player or location or world you need to check to see if the player is still there
 	public TransformBat(Player play,Plugina plug){
